@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80" # 8080 afuera → 80 adentro (nginx)
+    container_name: simple-html
